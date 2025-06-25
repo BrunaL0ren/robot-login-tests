@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-06-25T11:26:04.501995" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Testes" source="C:\Users\bruna\OneDrive\Documentos\teste_login_robot\login_testes.robot">
+<test id="s1-t1" name="Login com sucesso" line="7">
+<kw name="Abrir Navegador e Acessar Página de Login" owner="Login_resouces">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:04.924577" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-06-25T11:26:06.113254" level="WARN">The chromedriver version (136.0.7103.92) detected in PATH at C:\WebDriver\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.104); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-25T11:26:04.924078" elapsed="3.101609"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-25T11:26:08.026633" elapsed="0.039072"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:04.923074" elapsed="3.143048"/>
+</kw>
+<kw name="Inserir Credenciais Válidas" owner="Login_resouces">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:08.069768" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T11:26:08.067918" elapsed="0.147044"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:08.215578" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T11:26:08.215170" elapsed="0.084946"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:08.300779" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T11:26:08.300384" elapsed="0.092654"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:08.066856" elapsed="0.326378"/>
+</kw>
+<kw name="Verificar Login com Sucesso" owner="Login_resouces">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>class=inventory_list</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-25T11:26:08.394047" elapsed="0.009661"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:08.393735" elapsed="0.010079"/>
+</kw>
+<kw name="Fechar Navegador" owner="Login_resouces">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-25T11:26:08.404267" elapsed="2.193404"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:08.404045" elapsed="2.194132"/>
+</kw>
+<doc>Testa login válido no sistema</doc>
+<status status="PASS" start="2025-06-25T11:26:04.922090" elapsed="5.677105"/>
+</test>
+<test id="s1-t2" name="Login com falha" line="14">
+<kw name="Abrir Navegador e Acessar Página de Login" owner="Login_resouces">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:10.604924" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-06-25T11:26:10.997218" level="WARN">The chromedriver version (136.0.7103.92) detected in PATH at C:\WebDriver\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.104); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-25T11:26:10.604231" elapsed="1.988187"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-25T11:26:12.592589" elapsed="0.025525"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:10.603254" elapsed="2.015047"/>
+</kw>
+<kw name="Inserir Credenciais Inválidas" owner="Login_resouces">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:12.619556" level="INFO">Typing text 'usuario_invalido' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>usuario_invalido</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T11:26:12.619268" elapsed="0.155184"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:12.775209" level="INFO">Typing text 'senha_invalida' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>senha_invalida</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T11:26:12.774798" elapsed="0.100035"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:12.875194" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T11:26:12.875010" elapsed="0.080088"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:12.618815" elapsed="0.336501"/>
+</kw>
+<kw name="Verificar Login com Falha" owner="Login_resouces">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="login_button_container"]/div/form/div[3]/h3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T11:26:12.956255" elapsed="0.026018"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:12.955824" elapsed="0.026566"/>
+</kw>
+<kw name="Fechar Navegador" owner="Login_resouces">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-25T11:26:12.982958" elapsed="2.224867"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:12.982687" elapsed="2.225426"/>
+</kw>
+<doc>Testa login inválido no sistema</doc>
+<status status="PASS" start="2025-06-25T11:26:10.601629" elapsed="4.607162"/>
+</test>
+<test id="s1-t3" name="Login em branco" line="21">
+<kw name="Abrir Navegador e Acessar Página de Login" owner="Login_resouces">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:15.212395" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-06-25T11:26:15.604873" level="WARN">The chromedriver version (136.0.7103.92) detected in PATH at C:\WebDriver\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.104); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-25T11:26:15.211885" elapsed="1.927702"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-25T11:26:17.139834" elapsed="0.044968"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:15.211268" elapsed="1.973740"/>
+</kw>
+<kw name="Inserir Credenciais em Branco" owner="Login_resouces">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-25T11:26:17.186760" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-25T11:26:17.186191" elapsed="0.127437"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:17.185619" elapsed="0.128553"/>
+</kw>
+<kw name="Verificar Login com Falha" owner="Login_resouces">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="login_button_container"]/div/form/div[3]/h3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-25T11:26:17.315214" elapsed="0.029755"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:17.314655" elapsed="0.030513"/>
+</kw>
+<kw name="Fechar Navegador" owner="Login_resouces">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-25T11:26:17.346839" elapsed="2.181632"/>
+</kw>
+<status status="PASS" start="2025-06-25T11:26:17.346250" elapsed="2.182667"/>
+</kw>
+<doc>Testa login em branco no sistema</doc>
+<status status="PASS" start="2025-06-25T11:26:15.210301" elapsed="4.319256"/>
+</test>
+<status status="PASS" start="2025-06-25T11:26:04.503432" elapsed="15.028208"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Testes" id="s1" pass="3" fail="0" skip="0">Login Testes</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-25T11:26:06.113254" level="WARN">The chromedriver version (136.0.7103.92) detected in PATH at C:\WebDriver\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.104); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-06-25T11:26:10.997218" level="WARN">The chromedriver version (136.0.7103.92) detected in PATH at C:\WebDriver\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.104); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-06-25T11:26:15.604873" level="WARN">The chromedriver version (136.0.7103.92) detected in PATH at C:\WebDriver\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.104); currently, chromedriver 137.0.7151.119 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
