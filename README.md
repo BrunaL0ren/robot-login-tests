@@ -37,4 +37,4 @@ robot Login_test.robot
 ## Autora
 Bruna Loren de Souza Dias
 📧 brunaloren9@gmail.com
-🌐 github.com/BrunaL0ren/
+🌐 [GitHub](https://github.com/BrunaL0ren)
